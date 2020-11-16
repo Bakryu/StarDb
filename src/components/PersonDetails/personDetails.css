@@ -1,0 +1,33 @@
+.person-details {
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  width: 48%;
+  height: auto;
+  margin-bottom: auto;
+}
+.image-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+  height: 300px;
+  background-size: cover;
+}
+
+.card-body-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.person-description {
+  padding: 20px;
+  font-size: 20px;
+}
+.card-image {
+  height: 100%;
+}
+.select-person {
+  margin: 0 auto;
+  font-size: 20px;
+}

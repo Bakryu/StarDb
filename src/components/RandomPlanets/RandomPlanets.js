@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./randomPlanets.css";
-import SwapiServise from "../../services/SwapiServise.js";
+import SwapiServise from "../../services/SwapiService.js";
 import Spinner from "../Spinner";
 
 export default class RandomPlanets extends Component {
@@ -9,22 +9,28 @@ export default class RandomPlanets extends Component {
     planet: {},
     loading: true,
   };
-  constructor() {
-    super();
+
+  componentDidMount() {
     this.updatePlanet();
+    this.interval = setInterval(this.updatePlanet, 7000);
   }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   onPlanetLoaded = (planet) => {
     this.setState({ planet, loading: false });
   };
 
   onError = (err) => {};
-  updatePlanet() {
+
+  updatePlanet = () => {
     const id = Math.floor(Math.random() * 10) + 2;
     this.swapiServise
       .getPlanet(id)
       .then(this.onPlanetLoaded)
       .catch(this.onError);
-  }
+  };
   render() {
     const { planet, loading } = this.state;
 

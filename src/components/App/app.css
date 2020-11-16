@@ -8,9 +8,13 @@ body {
 .main-section {
   margin: 0 calc(50% - 550px);
 }
-.section_decor{
+.section_decor {
   padding: 30px;
   border-radius: 10px;
   background-color: rgba(128, 128, 128, 0.4);
   color: aliceblue;
+}
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
 }

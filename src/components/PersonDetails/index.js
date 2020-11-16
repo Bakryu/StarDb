@@ -1,3 +1,3 @@
-import PersoneDetails from "./PersoneDetails.js"
+import PersonDetails from "./PersonDetails.js"
 
-export default PersoneDetails;
+export default PersonDetails;
